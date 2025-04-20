@@ -1,0 +1,746 @@
+/* PAGINA PRINCIPAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #111;
+  }
+
+  /* Logo animado */
+
+  .logo-rotativo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: giroMoneda 3s linear infinite;
+  }
+  
+  @keyframes giroMoneda {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .pause-rotate {
+    animation-play-state: paused !important;
+  }
+  
+  /* Imagen bajo el formulario */
+.image {
+    width: 250px; 
+height: 220px; 
+border-radius: 60%; 
+}
+ 
+  /* menu desplegrable*/
+
+  header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+.mega-menu {
+        display: none;
+    position: absolute;
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-item a:hover {
+  color: #935ac6;
+}
+
+/* Hero overly */
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  /* Asegura que el video esté detrás del texto */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.5) !important;
+  z-index: 2;
+  visibility: visible;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Tarjetas de las clases */
+.card-body h5,
+.card-body p {
+  color: #fff;
+  text-align: center;
+}
+
+.card {
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin:auto;
+    max-width: 400px; /* ajustá el valor como quieras */
+}
+  
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #b96ad8;
+}
+  
+.card img {
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.hover-activa {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #b96ad8;
+  }
+ h2{
+    color: #fff;
+}  
+
+ /* Contador*/
+.contador {
+    background-color: #8957ac;
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+}
+  
+  .conteiner .numero {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+/* Testimonios */
+
+.testimonios {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #1b1b1b;
+  }
+  
+  .carousel {
+    overflow: hidden;
+    position: relative;
+  }
+
+.carousel-item {
+    color: #fff;
+    min-width: 300px;
+    background: #333;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Formulario y modal */
+/* Color de los botones */
+
+.btn-suscripcion {
+    background-color: #b96ad8 !important; /* Color morado */
+    color: #fff !important; /* Texto blanco */
+    border: none !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-suscripcion:hover {
+    background-color: #9a3eeb !important; /* Morado más oscuro al pasar el mouse */
+}
+
+.modal-content.bg-dark {
+    background-color: #222 !important; /* Fondo oscuro del modal */
+}
+
+.form-label.text-white {
+    color: #fff !important; /* Texto blanco para el label */
+}
+
+/* Redes Sociales */
+
+.footer-social a {
+font-size: 2rem;
+    color: #b96ad8;
+    margin: 0 1rem;
+    transition: color 0.3s ease; /* Transición suave */
+    }
+
+.footer-social a:hover {
+    color: #8a24f7; /* Morado más oscuro al pasar el mouse */
+}
+
+/* --------------- ESTILOS PARA LAS CLASES --------------- */
+
+/* --- imputs ocultos --- */
+.clases input[type="radio"] {
+  display: none;
+}
+
+/* --- label como botones --- */
+.clases label {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 2px solid #996fa8;
+  border-radius: 20px;
+  margin: 5px;
+  display: inline-block;
+  transition: 0.3s, color 0.3s;
+color: #fff;
+}
+
+.clases label:hover {
+  background-color: #996fa8;
+  color: rgb(244, 243, 243);
+}
+
+/* Galeria Mensory */
+
+.masonry-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+gap: 15px;
+}
+
+.masonry-item {
+break-inside: avoid; /* Para evitar cortes feos en masonry */
+}
+
+.img-overlay {
+position: relative;
+overflow: hidden;
+border-radius: 10px;
+}
+
+.img-overlay img {
+width: 100%;
+  height: auto;
+   display: block;
+transition: transform 0.4s ease;
+border-radius: 10px;
+}  
+
+.img-overlay:hover img {
+transform: scale(1.1);
+}
+ 
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.5);
+color: white;
+  display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+transition: opacity 0.3s ease;
+border-radius: 10px;
+font-size: 20px;
+font-weight: bold;
+}
+
+.img-overlay:hover .overlay {
+opacity: 1;
+}
+
+/* Estilo de la tabla de horarios */
+  
+.table {
+    background-color: #222; 
+     color: #fff; 
+border-collapse: collapse;
+}
+
+.table th {
+background-color: #6f42c1; 
+color: #fff; 
+padding: 1rem;
+text-align: center;
+}
+
+.table td {
+     background-color: #333; 
+color: #fff; 
+padding: 0.8rem;
+text-align: center;
+border: 1px solid #6610f2;
+}
+
+.table tr:nth-child(even) td {
+background-color: #444; /* Fondo ligeramente más claro para filas pares */
+}
+
+.table tr:hover td {
+background-color: #555; /* Fondo más claro al pasar el mouse */
+}
+
+/* --------------- ESTILOS PARA LA PAGINA DE LOS ENTRENADORES --------------- */
+
+/* Estilo de la tarjeta */
+.flip-card {
+perspective: 1000px;
+height: 350px;
+}
+
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+transition: transform 0.8s;
+transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+border-radius: 15px;
+}
+
+.flip-card-front {
+background: #343a40;
+color: white;
+}
+
+.flip-card-back {
+background-color: #2b2b2b;
+transform: rotateY(180deg);
+}
+
+.rating {
+font-size: 1.3rem;
+color: #ffc107;
+}
+
+.bg-purple {
+background-color: #6f42c1 !important;
+}    
+
+
+/* --------------- ESTILOS PARA LA PAGINA DE CONTACTO --------------- */ 
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.contacto .container {
+  background-color: #1e1e2f;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: auto;
+}
+
+.contacto .form-label {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.contacto .form-control::placeholder {
+  color: #ffffff; 
+  opacity: 0.7; 
+}
+
+.contacto .form-control {
+  background-color: #2c2c3a;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.contacto .form-control:focus {
+  background-color: #2c2c3a;
+  color: #ffffff;
+  border-color: #a362ea;
+  box-shadow: 0 0 5px rgba(163, 98, 234, 0.5);
+}
+.contacto .btn-primary {
+  background-color: #a362ea;
+  border: none;
+  color: white;
+transition: background-color 0.3s ease;
+}
+
+.contacto .btn-primary:hover {
+  background-color: #8a48d1;
+}
+
+  
+/* Spinner */
+#spinnerContacto {
+  vertical-align: middle;
+}
+
+/* Modal personalizado para contacto */
+#modalConfirmacionContacto .modal-content {
+  background-color: #1e1e2f;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #a362ea;
+}
+
+#modalConfirmacionContacto .btn-success {
+  background-color: #a362ea;
+  border: none;
+}
+
+#modalConfirmacionContacto .btn-success:hover {
+  background-color: #8a48d1;
+}
+
+/* --------------- ESTILOS PARA LA PAGINA DE PRECIOS --------------- */
+
+.seccion-precios {
+  background: #121212;
+  color: white;
+padding: 4rem 1rem;
+  text-align: center;
+}
+
+.titulo-precios {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Toggle */
+.toggle-precio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #666;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #8e44ad;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Tarjetas */
+.tarjetas-precios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tarjeta-precio {
+  background: #1e1e1e;
+  border: 2px solid #8e44ad;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.tarjeta-precio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #8e44ad55;
+}
+
+.tarjeta-precio h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #dea3f7;
+}
+
+.tarjeta-precio ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tarjeta-precio li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Tooltip  */
+.tarjeta-precio[data-bs-tooltip]:hover::after {
+  content: attr(data-bs-tooltip);
+  position: absolute;
+bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #8e44ad;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* --------------- ESTILOS PARA LA PAGINA DE BLOG --------------- */
+
+/* Artículos */
+    .blog-fitness {
+      background: #282828;
+  padding: 4rem 1rem;
+}
+
+.blog-fitness h1 {
+  color: #ffffff;
+}
+
+.blog-fitness .articulos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.articulo {
+  background: white;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform .3s;
+  max-width: 400px; 
+  margin: 0 auto;   
+}
+
+.articulo:hover {
+  transform: translateY(-5px);
+}
+
+.articulo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.articulo-body {
+  padding: 1rem;
+}
+
+.articulo-body h3 {
+  color: #2c3e50;
+}
+
+.etiquetas {
+  margin-top: .5rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  background: #8e44ad;
+  color: white;
+  padding: .2rem .6rem;
+  border-radius: .2rem;
+  font-size: .8rem;
+  margin-right: .3rem;
+}
+
+/* Filtro */
+.filtros {
+  margin-bottom: 2rem;
+  text-align: center;
+display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 10px;
+}
+
+.filtros .btn-tag {
+  background: transparent;
+  color: #ffffff;
+padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 2px solid #996fa8;
+  border-radius: 20px;
+    display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.filtros .btn-tag:hover {
+  background-color: #996fa8;
+  color: #000000;
+}
+
+/* Comentarios */
+.comentarios {
+  margin-top: 3rem;
+}
+.comentario {
+  position: relative;
+  background: #fff;
+  border-left: 4px solid #8e44ad;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: .3rem;
+}
+.comentario::before {
+  content: '';
+  position: absolute;
+  top: 1rem; left: -40px;
+  width: 32px; height: 32px;
+  background: url('avatar-placeholder.png') center/cover no-repeat;
+  border-radius: 50%;
+}
+.comentario .respuesta {
+  margin-left: 3rem;
+  border-left: 3px solid #ccc;
+  padding-left: 1rem;
+  opacity: .8;
+}
+
+/* Botón "Agregar comentario"  */
+#btnAgregarComentario {
+  background-color: #8e44ad;
+  color: #ffffff;
+  padding: .75rem 1.25rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: .3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 1.5rem auto 0;
+  display: block;
+}
+#btnAgregarComentario:hover {
+  background-color: #6a0dad;
+}
+
+/* Adaptación Responsive  */
+@media (max-width: 576px) {
+  .blog-fitness {
+    padding: 2rem .5rem;
+  }
+  .blog-fitness .articulos-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  }
+.filtros {
+    flex-wrap: wrap; /
+    justify-content: center; 
+  }
+  .filtros .btn-tag {
+    width: auto; 
+    padding: 10px 15px; 
+    font-size: 1rem; 
+  }
+}
+
+  
+   
+

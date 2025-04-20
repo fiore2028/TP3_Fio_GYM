@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Clases</title>
+</head>
+
+<body>
+    <header>
+
+        <!-- Menu desplegable -->
+
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="img_Videos/Logo.jpg" alt="Logo Activate Crossfit" class="logo-rotativo"> Activate Gym
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu mega-menu p-3">
+                                <li><a class="dropdown-item" href="clases.html">Clases</a></li>
+                                <li><a class="dropdown-item" href="entrenadores.html">Entrenadores</a></li>
+                                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                                <li><a class="dropdown-item" href="precios.html">Precios</a></li>
+                                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="clases">
+        <!-- Filtros -->
+        <div class="mb-4">
+            <label><input type="radio" name="filter" class="filter-radio" value="all" checked> Todos</label>
+            <label><input type="radio" name="filter" class="filter-radio" value="musculacion"> Musculación</label>
+            <label><input type="radio" name="filter" class="filter-radio" value="crossfit"> Crossfit</label>
+            <label><input type="radio" name="filter" class="filter-radio" value="funcional"> Funcional</label>
+        </div>
+
+        <section class="container py-5">
+            <!-- Clases -->
+            <div class="row" id="class-container">
+                <div class="col-md-4 mb-4 class-item musculacion">
+                    <div class="card h-100">
+                        <img src="img_Videos/images.jpeg" class="card-img-top" alt="Musculación">
+                        <div class="card-body">
+                            <h5 class="card-title">Musculación</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 class-item crossfit">
+                    <div class="card h-100">
+                        <img src="img_Videos/crossfit_37303.webp" class="card-img-top" alt="Crossfit">
+                        <div class="card-body">
+                            <h5 class="card-title">Crossfit</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 class-item funcional">
+                    <div class="card h-100">
+                        <img src="img_Videos/Funcional(1).jpeg" class="card-img-top" alt="Funcional">
+                        <div class="card-body">
+                            <h5 class="card-title">Funcional</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria Mensory -->
+        <section class="container">
+
+            <h2 class="text-center mb-4">Galería de Fotos</h2>
+            <div class="masonry-grid">
+               <div class="masonry-item">
+<div class="img-overlay">
+                      <img src="img_Videos/images.jpeg" alt="Musculación" class="img-fluid">
+                      <div class="overlay">
+                       <h5>Musculación</h5>
+</div>
+                   </div>
+               </div>
+
+                          <div class="masonry-item">
+<div class="img-overlay">
+             <img src="img_Videos/crossfit_37303.webp" alt="Crossfit" class="img-fluid">
+                      <div class="overlay">
+                        <h5>Crossfit</h5>
+                                        </div>
+                  </div>
+                </div>
+                             <div class="masonry-item">
+                  <div class="img-overlay">
+                   <img src="img_Videos/Funcional(1).jpeg" alt="Funcional" class="img-fluid">
+                      <div class="overlay">
+                        <h5>Funcional</h5>
+                    </div>
+                  </div>
+              </div>
+                                <div class="masonry-item">
+              <div class="img-overlay">
+                  <img src="img_Videos/calistenia.jpeg" alt="Funcional" class="img-fluid">
+                   <div class="overlay">
+                       <h5>En las barras</h5>
+</div>
+</div>
+  </div>
+                                    <div class="masonry-item">
+<div class="img-overlay">
+                          <img src="img_Videos/mensory1.jpg" alt="Crossfit" class="img-fluid">
+                        <div class="overlay">
+<h5>Fuertes</h5>
+    </div>
+</div>
+                </div>
+                  <div class="masonry-item">
+                       <div class="img-overlay">
+                         <img src="img_Videos/mensory2.jpg" alt="Funcional" class="img-fluid">
+                      <div class="overlay">
+                            <h5>💪💪</h5>
+                        </div>
+     </div>
+</div>
+                    <div class="masonry-item">
+<div class="img-overlay">
+                     <img src="img_Videos/Logo.jpg" alt="Crossfit" class="img-fluid">
+                      <div class="overlay">
+                           <h5>🔥</h5>
+                        </div>
+                    </div>
+</div>
+                     </div>
+                      </section>
+
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Nuestros Horarios </h2>
+          <div class="table-responsive">
+          <table class="table table-bordered table-striped text-center">
+              <thead class="table-dark">
+                  <tr>
+                    <th>Horario</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+<th>Miércoles</th>
+                    <th>Jueves</th>  
+                    <th>Viernes</th>
+                  </tr>
+                    </thead>
+                <tbody>
+                        <tr>
+                       <td>8:00</td>
+                    <td>Crossfit</td>
+                            <td>-</td>    
+                        <td>-</td>
+                           <td>Funcional</td>
+                         <td>Musculación</td>   
+                     </tr>   
+                   <tr>
+                        <td>10:00</td>
+                                <td>Musculación</td>
+                        <td>Funcional</td>
+                     <td>Crossfit</td>     
+                       <td>-</td>        
+                    <td>-</td>
+                  </tr>
+                          <tr>
+                          <td>16:00</td>
+                         <td>Funcional</td>
+                           <td>Musculación</td>
+                         <td>-</td>
+                      <td>-</td>
+                          <td>Crossfit</td>
+                        </tr>
+                      <tr>
+                          <td>18:00</td>
+                          <td>-</td>
+                               <td>-</td>
+                        <td>Funcional</td>
+                    <td>Crossfit</td>
+                               <td>-</td>
+                       </tr>
+                   <tr>
+                         <td>20:00</td>    
+                      <td>-</td>
+                        <td>Crossfit</td>
+                               <td>Musculación</td>   
+                       <td>-</td>     
+                     <td>Crossfit</td>       
+                      </tr>
+                    </tbody>  
+              </table>
+              </div>    
+                 </section>
+     </main>
+
+         <footer class="footer bg-dark text-white py-4">
+             <div class="container">
+
+              <!-- Redes Sociales -->
+                <div class="redes-sociales text-center mt-3">
+                     <p>&copy; 2025 Activate Crossfit. Todos los derechos reservados.</p>
+<div class="footer-social">
+<a href="https://www.facebook.com/profile.php?id=61574089408111"><i
+class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/activatecrossfit_tcv?igsh=MWcwOThyaHNla3Nsaw=="><i
+class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.js"></script>
+</body>
+
+</html>

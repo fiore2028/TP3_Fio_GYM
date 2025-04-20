@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="bootstrap-5.3.5-dist/css/bootstrap.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Blog</title>
+</head>
+
+<body>
+  <header>
+    <!-- Menu desplegable -->
+  
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid">
+  
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="img_Videos/Logo.jpg" alt="Logo Activate Crossfit" class="logo-rotativo"> Activate Gym
+        </a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+              </a>
+              <ul class="dropdown-menu mega-menu p-3">
+                <li><a class="dropdown-item" href="clases.html">Clases</a></li>
+                <li><a class="dropdown-item" href="entrenadores.html">Entrenadores</a></li>
+                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                <li><a class="dropdown-item" href="precios.html">Precios</a></li>
+                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="blog-fitness container">
+    <h1 class="text-center mb-4">Blog Fitness Revista</h1>
+
+    <!-- Filtros por tags -->
+    <div class="filtros">
+      <button class="btn btn-outline-primary btn-tag" data-tag="all">Todas</button>
+      <button class="btn btn-outline-primary btn-tag" data-tag="nutricion">Nutrición</button>
+      <button class="btn btn-outline-primary btn-tag" data-tag="entrenamiento">Entrenamiento</button>
+      <button class="btn btn-outline-primary btn-tag" data-tag="bienestar">Bienestar</button>
+    </div>
+
+    <!-- Artículos estilo revista -->
+    <div class="articulos-grid">
+      <article class="articulo" data-tags="nutricion bienestar" data-aos="fade-up">
+        <img src="img_Videos/articulo1.jpeg" alt="Artículo 1">
+        <div class="articulo-body">
+          <h3>5 Superalimentos para tu rendimiento</h3>
+          <p>Descubre cómo estos alimentos pueden mejorar tu energía.</p>
+          <div class="etiquetas">
+            <span class="etiqueta">Nutrición</span>
+            <span class="etiqueta">Bienestar</span>
+          </div>
+        </div>
+      </article>
+      <article class="articulo" data-tags="entrenamiento" data-aos="fade-up" data-aos-delay="100">
+        <img src="img_Videos/articulo2.webp" alt="Artículo 2">
+        <div class="articulo-body">
+          <h3>Rutina HIIT para quemar grasa</h3>
+          <p>Una sesión rápida y efectiva para maximizar calorías.</p>
+          <div class="etiquetas">
+            <span class="etiqueta">Entrenamiento</span>
+          </div>
+        </div>
+      </article>
+      <article class="articulo" data-tags="bienestar" data-aos="fade-up" data-aos-delay="200">
+        <img src="img_Videos/articulo3.webp" alt="Artículo 3">
+        <div class="articulo-body">
+          <h3>Técnicas de meditación para deportistas</h3>
+          <p>Mejora tu concentración y recuperación.</p>
+          <div class="etiquetas">
+            <span class="etiqueta">Bienestar</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Sección de Comentarios -->
+    <section class="comentarios">
+      <h2>Comentarios</h2>
+      <div id="listaComentarios">
+        <div class="comentario">
+          <p><strong>Cami:</strong> Estan muy buenas las recomendaciones !!!</p>
+          <div class="respuesta">
+            <p><strong>Admin:</strong> Gracias Cami, nos alegra que te sirva.</p>
+          </div>
+        </div>
+      </div>
+      <div class="comentarios">
+        <textarea id="inputComentario" class="form-control mb-3" rows="3"
+          placeholder="Escribe tu comentario aquí"></textarea>
+        <button id="btnAgregarComentario" class="btn btn-primary">Agregar Comentario</button>
+utton>
+        <div id="listaComentarios" class="mt-4">
+          <!-- Los comentarios se añadirán aquí dinámicamente -->
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+
+
+      <!-- Redes Sociales -->
+      <div class="redes-sociales text-center mt-3">
+        <p>&copy; 2025 Activate Crossfit. Todos los derechos reservados.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61574089408111"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/activatecrossfit_tcv?igsh=MWcwOThyaHNla3Nsaw=="><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/jquery.js"></script>
+</body>
+
+</html>
