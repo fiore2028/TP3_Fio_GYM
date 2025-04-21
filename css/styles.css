@@ -157,6 +157,7 @@ body {
  h2{
     color: #fff;
 }  
+
 @media (max-width: 576px) {
   .card-img-top {
     height: 150px;
